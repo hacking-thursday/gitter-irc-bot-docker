@@ -1,6 +1,7 @@
 FROM node:latest
-MAINTAINER Rex Tsai <rex.cc.tsai@gmail.com>
+MAINTAINER Rex Tsai "http://about.me/chihchun"
 
 WORKDIR /tmp
-RUN npm install gitter-irc-bot && npm cache clear
+RUN npm install gitter-irc-bot@1.5.1 \
+        && npm cache clear
 CMD [ "node_modules/gitter-irc-bot/bin.js" ]
